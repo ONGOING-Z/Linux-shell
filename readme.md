@@ -80,3 +80,31 @@ statements;
 ```bash
 $ fname
 ```
+
+读取命令返回值
+```bash
+cmd;
+echo $?;
+```
+`$?`会给出命令cmd的返回值。返回值被称为退出状态，可用于分析命令执行成功与否。若命令成功退出，退出状态为0,否则为非0.
+
+1.12 读取命令序列输出
+使用管道(pipe)来连接每一个过滤器。
+eg. `$ cmd1 | cmd2 | cmd3`
+这里cmd1的输出传递给cmd2, cmd2的输出传递给cmd3.
+
+1.13 read
+`read -n number_of_chars variable_name`
+eg.
+```bash
+$ read -n 2 var
+$ echo $var
+$ read -s var # 不回显方式读取密码
+$ read -p "Enter input: " var # 显示提示信息
+```
+
+1.14 (jump)
+1.15 (jump)
+
+----
+*Chapte 1 finished*
