@@ -1,3 +1,5 @@
+## Linux Shell
+
 1.2 终端打印
 
 echo && printf
@@ -106,5 +108,51 @@ $ read -p "Enter input: " var # 显示提示信息
 1.14 (jump)
 1.15 (jump)
 
-----
 *Chapte 1 finished*
+
+----
+
+Chapter2 命令之乐
+
+2.2 用cat进行拼接
+
+2.3 录制和回放终端会话(jump)
+2.4 文件查找和文件列表
+`find`
+usage: `$ find base_path`
+(1)列出当前目录及子目录下所有文件及文件夹
+```bash
+$ find . -print
+```
+`-print`指明打印出匹配文件的文件名（路径）。`\n`作为用于分隔文件的定界符。
+
+(2)根据文件名或正则表达式匹配搜索
+
+```bash
+$ find . -name "*.txt" -print
+```
+选项`-name`的参数指定了文件名必须匹配的字符串。
+选项`-iname`可以忽略字母大小写。
+(3)否定参数
+```bash
+$ find . ! -name "*.txt" -print
+```
+匹配所有不以.txt结尾的文件名。
+(4)目录深度
+```bash
+$ find . -maxdepth 1
+```
+(5)根据文件类型搜索
+`-type`可以对文件搜索进行过滤。
+列出所有的目录：`$ find . -type d -print`
+文件类型 | 类型参数
+普通文件 | f
+目录     | d
+符号链接 | l
+(6)删除匹配的文件
+`-delete`可用来删除find查找到的匹配文件
+eg. 删除当前目录下所有的`.swp`文件
+```bash
+$ find . -type f -name "*.swp" -delete
+```
+**attention**: 某些小节是跳过了的
