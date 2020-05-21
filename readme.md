@@ -145,10 +145,12 @@ $ find . -maxdepth 1
 (5)根据文件类型搜索
 `-type`可以对文件搜索进行过滤。
 列出所有的目录：`$ find . -type d -print`
+
 文件类型 | 类型参数
 普通文件 | f
 目录     | d
 符号链接 | l
+
 (6)删除匹配的文件
 `-delete`可用来删除find查找到的匹配文件
 eg. 删除当前目录下所有的`.swp`文件
@@ -156,3 +158,62 @@ eg. 删除当前目录下所有的`.swp`文件
 $ find . -type f -name "*.swp" -delete
 ```
 **attention**: 某些小节是跳过了的
+
+2.5 玩转xargs(jump)
+2.6 用tr进行转换(jump)
+
+> tr可以对来自标准输入的字符进行替换、删除以及压缩。
+> 它可以将一组字符变成另一组字符，故也被称为translate命令。
+
+2.7 核验与核实(jump)
+2.8 排序、单一和重复
+
+`sort`
+(1)按数字进行排序
+```bash
+$ sort -n file.txt
+```
+(2)按逆序进行排序
+```bash
+$ sort -r file.txt
+```
+(3)按第一列进行排序
+选项`-k`
+```bash
+# 依据第一列，顺序排序
+$ sort -nk 1 file.txt
+```
+
+`uniq`: 通过消除重复内容，从给定输入中找出单一的行。
+usage: `$ uniq file.txt`
+(1)只显示“唯一”的行
+```bash
+$ uniq -u file.txt
+```
+(2)统计各行在文件中出现的次数
+```bash
+$ uniq -c file.txt
+```
+(3)显示文件中重复的行
+```bash
+$ uniq -d file.txt
+```
+*最后一部分跳过了*
+
+2.9 临时文件命名和随机数(jump)
+2.10 分割文件和数据(jump)
+2.11 根据扩展名切分文件名
+(1)将文件名称从“名陈.扩展名”中提取出来
+借助`%`操作符
+eg. 从`sample.jpg`中提取`sample`
+```bash
+$ file_jpg="sample.jpg"
+$ name=${file_jpg%.*}
+$ echo $name
+```
+(2)将扩展名提取出来
+借助`#`操作符
+```bash
+$ extension=${file_jpg#*.}
+$ echo $extension
+```
