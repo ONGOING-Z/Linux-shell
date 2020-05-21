@@ -1,5 +1,8 @@
 ## Linux Shell
 
+记录一些从[Linux Shell脚本攻略][1]上学到的有趣知识。
+
+----
 1.2 终端打印
 
 echo && printf
@@ -217,3 +220,6 @@ $ echo $name
 $ extension=${file_jpg#*.}
 $ echo $extension
 ```
+
+
+[1]: https://book.douban.com/subject/6889456/
