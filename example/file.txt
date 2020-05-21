@@ -1,0 +1,2 @@
+This is a line inside file.txt
+This is the second line inside file.txt
