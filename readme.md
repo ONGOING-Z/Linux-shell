@@ -214,12 +214,27 @@ $ file_jpg="sample.jpg"
 $ name=${file_jpg%.*}
 $ echo $name
 ```
+`${VAR%.*}`: 从`$VAR`中删除位于`%`右侧的通配符所匹配的字符串。
+`%`属于非贪婪(non-greedy)操作。它**从右到左**找出匹配通配符的最短结果。
+`%%`属于贪婪(greedy)操作。它**从右到左**找出匹配通配符的最长字符串。
 (2)将扩展名提取出来
 借助`#`操作符
 ```bash
 $ extension=${file_jpg#*.}
 $ echo $extension
 ```
+`${VAR#*.}`: 从`$VAR`中删除位于#右侧的通配符所匹配的字符串。
+`#`属于非贪婪(non-greedy)操作。它**从左到右**找出匹配通配符的最短结果。
+`##`属于贪婪(greedy)操作。它**从左到右**找出匹配通配符的最长结果。
+
+2.12 批量重命名和移动(jump)
+2.13 拼写检查与词典操作(jump)
+2.14 交互输入自动化(jump)
+
+*Chapter 2 finished!*
+
+----
+
 
 
 [1]: https://book.douban.com/subject/6889456/
