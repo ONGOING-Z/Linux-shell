@@ -234,6 +234,27 @@ $ echo $extension
 *Chapter 2 finished!*
 
 ----
+Chapter 3
+*20.5.23*
+
+3.1(jump)
+3.2(jump)
+3.3(jump)
+3.4 查找并删除重复文件(jump)
+3.5 创建长路径目录(jump)
+3.6 文件权限、所有权(jump)
+3.7 创建不可修改文件(jump)
+3.8 批量生成空白文件(jump)
+3.9 查找符号链接及其指向目标(jump)
+3.10 列举文件类型统计信息(jump)
+3.11 环回文件与挂载(jump)
+3.12(jump)
+3.16 pushd/popd目录进栈和出栈
+
+*Chapter3 finished!*
+
+---
+
 
 
 
