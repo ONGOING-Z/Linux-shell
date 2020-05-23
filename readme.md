@@ -257,5 +257,7 @@ Chapter 3
 
 
 
+**注**: 
+1. 标注有`jump`的都是现在用不到的或者当前并不太感兴趣的。先跳过这些。
 
 [1]: https://book.douban.com/subject/6889456/
